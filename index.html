@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Agar website menyesuaikan ukuran layar HP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ketahanan Pangan | Edukasi</title>
+
+    <style>
+        /* =========================
+           1. PENGATURAN DASAR
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f6fc;
+            color: #19324d;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           2. BAGIAN HEADER
+        ========================= */
+
+        header {
+            background-color: #174a78;
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* =========================
+           3. KONTEN UTAMA
+        ========================= */
+
+        main {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background-color: #fff4c7;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            color: #174a78;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           4. KARTU TIPS
+        ========================= */
+
+        .tips-container {
+            display: grid;
+
+            /* Membuat kolom otomatis menyesuaikan layar */
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(220px, 1fr)
+            );
+
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            border-bottom: 5px solid #f5d76e;
+
+            /* Memberikan efek bayangan */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+
+            transition: transform 0.3s;
+        }
+
+        /* Efek ketika mouse diarahkan ke kartu */
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #174a78;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           5. BAGIAN TAHUKAH KAMU
+        ========================= */
+
+        .fact-section {
+            background-color: #dceeff;
+            padding: 30px;
+            margin-top: 35px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .fact-section h2 {
+            color: #174a78;
+            margin-bottom: 10px;
+        }
+
+        #factText {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            min-height: 85px;
+        }
+
+        button {
+            background-color: #174a78;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #f0c94d;
+            color: #19324d;
+        }
+
+        /* =========================
+           6. FOOTER
+        ========================= */
+
+        footer {
+            background-color: #174a78;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 45px;
+        }
+
+        /* =========================
+           7. RESPONSIVE UNTUK HP
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+            main {
+                margin-top: 20px;
+            }
+
+            .intro,
+            .fact-section {
+                padding: 20px;
+            }
+
+            .tips-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER WEBSITE -->
+    <header>
+        <h1>🌾 Ketahanan Pangan</h1>
+
+        <p>
+            Mengenal pentingnya menjaga ketersediaan pangan
+            untuk kehidupan yang sehat dan masa depan
+            Indonesia yang lebih baik.
+        </p>
+    </header>
+
+    <!-- KONTEN UTAMA WEBSITE -->
+    <main>
+
+        <!-- PENJELASAN SINGKAT -->
+        <section class="intro">
+            <h2>Apa Itu Ketahanan Pangan?</h2>
+
+            <p>
+                Ketahanan pangan adalah kondisi ketika semua orang
+                memiliki akses terhadap pangan yang cukup, aman,
+                bergizi, dan terjangkau untuk memenuhi kebutuhan
+                hidupnya.
+
+                Ketahanan pangan penting agar masyarakat dapat
+                hidup sehat, aktif, dan produktif.
+            </p>
+        </section>
+
+        <!-- DAFTAR TIPS -->
+        <section>
+            <h2>💡 3 Tips Menjaga Ketahanan Pangan</h2>
+
+            <div class="tips-container">
+
+                <!-- Tips pertama -->
+                <div class="card">
+                    <div class="icon">🌱</div>
+
+                    <h3>1. Menanam Tanaman Pangan</h3>
+
+                    <p>
+                        Manfaatkan lahan kosong di rumah atau sekolah
+                        untuk menanam sayuran seperti cabai,
+                        kangkung, dan tomat.
+                    </p>
+                </div>
+
+                <!-- Tips kedua -->
+                <div class="card">
+                    <div class="icon">🍚</div>
+
+                    <h3>2. Tidak Membuang Makanan</h3>
+
+                    <p>
+                        Ambil makanan secukupnya dan habiskan
+                        makanan yang sudah diambil agar tidak
+                        terjadi pemborosan pangan.
+                    </p>
+                </div>
+
+                <!-- Tips ketiga -->
+                <div class="card">
+                    <div class="icon">🛒</div>
+
+                    <h3>3. Memilih Pangan Lokal</h3>
+
+                    <p>
+                        Belilah produk pangan lokal seperti beras,
+                        jagung, singkong, dan buah-buahan dari
+                        petani sekitar.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BAGIAN INTERAKTIF -->
+        <section class="fact-section">
+
+            <h2>🤔 Tahukah Kamu?</h2>
+
+            <p>
+                Klik tombol di bawah untuk menemukan
+                fakta menarik tentang ketahanan pangan!
+            </p>
+
+            <!-- Tempat menampilkan fakta -->
+            <p id="factText">
+                Yuk, temukan fakta menarik tentang pangan!
+            </p>
+
+            <!-- Tombol untuk menjalankan JavaScript -->
+            <button onclick="showFact()">
+                Tahukah Kamu?
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 Edukasi Ketahanan Pangan |
+            Belajar untuk Masa Depan Indonesia 🌾
+        </p>
+    </footer>
+
+
+    <!-- =========================
+         8. JAVASCRIPT
+         Mengatur tombol interaktif
+    ========================= -->
+
+    <script>
+
+        // Kumpulan fakta menarik tentang ketahanan pangan
+        const facts = [
+
+            "🌽 Jagung, singkong, dan sagu dapat menjadi sumber karbohidrat alternatif selain beras.",
+
+            "🌱 Menanam sayuran di halaman rumah dapat membantu memenuhi kebutuhan pangan keluarga.",
+
+            "🍚 Mengambil makanan secukupnya merupakan salah satu cara sederhana mengurangi sampah makanan.",
+
+            "🐟 Ikan merupakan sumber protein yang penting untuk pertumbuhan dan kesehatan tubuh.",
+
+            "🥬 Mengonsumsi sayuran dan buah-buahan lokal membantu mendukung petani di sekitar kita.",
+
+            "🌾 Petani memiliki peran penting dalam menjaga ketersediaan pangan bagi masyarakat."
+
+        ];
+
+        // Variabel untuk menyimpan nomor fakta sebelumnya
+        let previousFact = -1;
+
+        // Fungsi yang dijalankan ketika tombol diklik
+        function showFact() {
+
+            let randomFact;
+
+            // Mengacak fakta agar tidak sama dengan sebelumnya
+            do {
+                randomFact = Math.floor(Math.random() * facts.length);
+            } while (randomFact === previousFact);
+
+            // Menyimpan nomor fakta yang ditampilkan
+            previousFact = randomFact;
+
+            // Menampilkan fakta ke halaman website
+            document.getElementById("factText").innerText =
+                facts[randomFact];
+
+        }
+
+    </script>
+
+</body>
+</html>
